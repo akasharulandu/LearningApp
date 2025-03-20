@@ -18,6 +18,7 @@ function AppHeader() {
     setMenuTheme(newTheme);
     
     // Apply dark mode to the entire page (Optional)
+    // will cchnage this
     document.body.style.backgroundColor = newTheme === 'dark' ? '#1a1a1a' : '#ffffff';
     document.body.style.color = newTheme === 'dark' ? '#ffffff' : '#000000';
   };
