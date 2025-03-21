@@ -58,6 +58,7 @@ function AppHeader() {
         onChange={changeTheme}
         checkedChildren="Dark"
         unCheckedChildren="Light"
+        style={{display: 'inline-block'}}
       />
 
       {/* Navigation Menu */}
@@ -70,6 +71,7 @@ function AppHeader() {
           flex: 1,
           minWidth: "200px",
           borderBottom:'none',
+          display: 'inline-block'
         }}
 
         // items={[
@@ -80,12 +82,13 @@ function AppHeader() {
       />
 
       {/* Profile Dropdown */}
-      <Dropdown overlay ={<Menu items={items} onClick={handleDropdownClick} />} trigger={['click']}>
-        <span onClick={(e) => e.preventDefault()} style={{ cursor: "pointer", color: menuTheme === 'dark' ? '#ffffff' : '#000000',marginRight:'20px' }}>
+      <Dropdown overlay ={<Menu items={items} onClick={handleDropdownClick} />} trigger={['click']} >
+        <span onClick={(e) => e.preventDefault()} style={{ cursor: "pointer", color: menuTheme === 'dark' ? '#ffffff' : '#000000',marginRight:'20px', display:'inline-block'}}>
           <Space>
-          <Avatar icon={<UserOutlined />} />
+          <Avatar icon={<UserOutlined />} style={{display:'inline-block'}}/>
           </Space>
         </span>
+      
       </Dropdown>
     </Header>
   );
