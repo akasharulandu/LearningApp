@@ -7,7 +7,9 @@ import {
   SettingOutlined,
   UserOutlined,
 } from "@ant-design/icons";
+import { Link, Links } from "react-router-dom";
 import { Layout, Menu } from "antd";
+
 
 const { Sider } = Layout;
 
@@ -17,19 +19,20 @@ function getItem(label, key, icon, children) {
     icon,
     children,
     label,
+    
   };
 }
 
 const items = [
-  getItem("Dashboard", "1", <PieChartOutlined />),
-  getItem("Courses", "2", <DesktopOutlined />),
-  getItem("Assignments", "5", <FileOutlined />),
-  getItem("Profile", "sub1", <UserOutlined />, [
+  getItem(<Link to="/dashboard">Dashboard</Link>, "1", <PieChartOutlined />),
+  getItem(<Link to="/courses">Courses</Link>, "2", <DesktopOutlined />),
+  getItem(<Link to="/assignments">Assignments</Link>, "5", <FileOutlined />),
+  getItem(<Link to="/profile">Profile</Link>, "sub1", <UserOutlined />, [
     getItem("Admin", "3"),
     getItem("General User", "4"),
   ]),
-  getItem("Settings", "6", <SettingOutlined />),
-getItem("Support", "7", <CustomerServiceOutlined />),
+  getItem(<Link to="/setting">Settings</Link>, "6", <SettingOutlined />),
+getItem(<Link to="/support">Support</Link>, "7", <CustomerServiceOutlined />),
 
 ];
 

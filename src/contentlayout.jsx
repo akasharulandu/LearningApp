@@ -1,6 +1,9 @@
 import React from 'react'; 
 import { Breadcrumb, Layout, theme } from 'antd';
 import { HomeOutlined, UserOutlined } from '@ant-design/icons';
+import { Route, Routes } from 'react-router-dom';
+import Courses from './courses';
+import Dashboard from './dashboard';
 const { Content } = Layout;
 
 function MainContent() {
@@ -32,14 +35,27 @@ function MainContent() {
   />
       <div
         style={{
-          padding: 24,
+          padding: 5,
           minHeight: 360,
           background: colorBgContainer,
           borderRadius: borderRadiusLG,
         }}
       >
-        This is the content layout.
+        
+       {/* Routing */}
+       <Routes>
+          <Route path="/" element={<>This is the dashboard page</>} />
+          <Route path="/dashboard" element={<> <Dashboard/> </>} />
+          <Route path="/courses" element={<> <Courses/> </>} />
+          <Route path="/assignments" element={<>This is the assignments page</>} />
+          <Route path="/profile" element={<>This is the profile page</>} />
+          <Route path="/setting" element={<>This is the settings page</>} />
+          <Route path="/support" element={<>This is the support page</>} />
+        </Routes>
+        {/* End Routing */}
       </div>
+      
+
     </Content>
   );
 }

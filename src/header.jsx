@@ -5,6 +5,7 @@ import { DownOutlined, LoginOutlined, SettingOutlined, UserOutlined } from '@ant
 import SearchBar from './searchbar';
 
 
+
 const url = 'https://gw.alipayobjects.com/zos/rmsportal/KDpgvguMpGfqaHPjicRK.svg';
 
 const { Header } = Layout;
@@ -29,10 +30,11 @@ function AppHeader() {
   };
 
   // Profile dropdown items
-  const items = [
+  const Items = [
     { key: '1', label: 'Profile', icon: <UserOutlined /> },
     { key: '2', label: 'Logout', icon: <LoginOutlined /> },
   ];
+
 
   // Handle dropdown selection
   const handleDropdownClick = ({ key }) => {
@@ -71,21 +73,17 @@ function AppHeader() {
           flex: 1,
           minWidth: "200px",
           borderBottom:'none',
-          display: 'inline-block'
-        }}
-
-        // items={[
-        //   { key: 'home', label: 'Home' },
-        //   { key: 'about', label: 'About' },
-        //   { key: 'contact', label: 'Contact' }
-        // ]}
+          display: 'inline-block',
+          }}
+          
       />
 
       {/* Profile Dropdown */}
-      <Dropdown overlay ={<Menu items={items} onClick={handleDropdownClick} />} trigger={['click']} >
+      <Dropdown overlay ={<Menu items={Items} onClick={handleDropdownClick}/>} trigger={['click']} >
         <span onClick={(e) => e.preventDefault()} style={{ cursor: "pointer", color: menuTheme === 'dark' ? '#ffffff' : '#000000',marginRight:'20px', display:'inline-block'}}>
           <Space>
           <Avatar icon={<UserOutlined />} style={{display:'inline-block'}}/>
+          
           </Space>
         </span>
       

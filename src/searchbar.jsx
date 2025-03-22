@@ -14,7 +14,7 @@ const SearchBar = () => {
   };
 
   return (
-    <div style={{ display: "flex", alignItems: "center", width: "300px" }}>
+    <div style={{ display: "flex", alignItems: "center", width: "300px", display: "inline-block",}}>
       <Input
         placeholder="Search..."
         value={searchText}
