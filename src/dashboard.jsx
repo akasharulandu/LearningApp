@@ -22,7 +22,7 @@ const Dashboard = () => (
     }}
     
   >
-   <div>
+   <div>   
     <h1 style={{marginTop:'0', padding:'0', display:'inline-block',marginBlock:'0',}}>Welcom back, User!</h1>
     <p style={{marginTop:'10', padding:'0', marginBlock:'0', justifyContent:'flex'}}>Always stay updated with your code learning software</p>
     </div>
